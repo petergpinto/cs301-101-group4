@@ -5,6 +5,7 @@
 We will be following the outline of the [BTC Deep Forcasting project](https://pantelis.github.io/cs634/docs/common/projects/btc-forecasting/) with a few modifications.  
 Firstly, we will be using the Reddit APIs rather than Twitter, since in personal experience they are more forgiving in terms of rate limiting.  Secondly, for the implementation of the price predictor, we will be primarily working with models discussed in class rather than RNN architectures.  This will include models such as Deep Neural Networks, Random Forests, and Boosting methods.  We will investigate which models covered in class best represent the data and tweak them to improve performance.
 
+We will do this for 10 unique ticker symbols which will be chosen based on the number of mentions we are able to collect.  GME for example is likely to be the most mentioned, and therefore have the most data making it a good selection.
 
 ## Original Proposal below
 
