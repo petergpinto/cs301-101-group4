@@ -10,9 +10,9 @@ import mysql.connector
 import nltk
 
 #Non working client secrets
-reddit = praw.Reddit(client_id='Tqy7DCJp9zWSyQ',
-    client_secret='8wZIBFDxzb4V-e8YlMAv20l_5koQnQ',
-    user_agent='test agent runningwaffle'
+reddit = praw.Reddit(client_id='',
+    client_secret='',
+    user_agent=''
 )
 
 url = "https://www.reddit.com/r/wallstreetbets/comments/ntvrr6/bb_consolidated_dd_why_last_week_was_just_a/"
