@@ -1,0 +1,16 @@
+[Unit]
+Description=Comment scraper service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=mentions_collector
+WorkingDirectory=/home/mentions_collector/
+ExecStart=/usr/bin/python3 /home/mentions_collector/comment_service.py
+
+
+[Install]
+WantedBy=multi-user.target
