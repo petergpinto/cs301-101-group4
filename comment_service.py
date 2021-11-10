@@ -5,12 +5,11 @@ import hashlib
 import os
 import sys
 import subprocess
-import sqlite3
 import re
 import mysql.connector
 import nltk
 
-
+#Non working client secrets
 reddit = praw.Reddit(client_id='Tqy7DCJp9zWSyQ',
     client_secret='8wZIBFDxzb4V-e8YlMAv20l_5koQnQ',
     user_agent='test agent runningwaffle'
@@ -18,7 +17,6 @@ reddit = praw.Reddit(client_id='Tqy7DCJp9zWSyQ',
 
 url = "https://www.reddit.com/r/wallstreetbets/comments/ntvrr6/bb_consolidated_dd_why_last_week_was_just_a/"
 
-con = sqlite3.connect('mentions.db')
 mydb = mysql.connector.connect(host='localhost', user='mentions', password='StockMentions123!', database="cs301data")
 
 #Load ticker into set
@@ -26,6 +24,7 @@ mydb = mysql.connector.connect(host='localhost', user='mentions', password='Stoc
 symbols = set()
 companyNames = dict()
 
+#A csv file with company names, we use these to attempt to assign a ticker to a comment, even if it is not explicitly mentioned
 import csv
 with open("relevant_ticker_data.csv") as csv_file:
 	csv_reader = csv.reader(csv_file, delimiter=',')
@@ -38,7 +37,7 @@ with open("relevant_ticker_data.csv") as csv_file:
 			companyNames[row[0]] = row[1].lower()
 		line_count += 1
 
-
+#Don't attempt to match common words to ticker symbols
 exclude_words = []
 with open("exclude_words") as fp:
 	lines = fp.readlines()
@@ -47,9 +46,6 @@ with open("exclude_words") as fp:
 
 def checkWord(word):
 	symbol = word
-	#if len(symbol) > 1:
-	#	if symbol.lower() not in exclude_words:
-	#		symbol = symbol.upper()
 	if symbol in symbols:
 		return {symbol.upper():1}
 	word = word.lower()
@@ -61,6 +57,7 @@ def checkWord(word):
 
 cursor = mydb.cursor()
 
+#We can't check all subreddits, but we can look at new comments being posted in specific ones
 subs = ""
 with open("subreddit_list") as fp:
 	lines = fp.readlines()
