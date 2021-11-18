@@ -1,11 +1,11 @@
-11/18/2021, Committed before market open
-NVDA  285.796539
-GME   209.946167
-AMC   40.629963
-AMD   153.677597
-BBBY  19.610260
-F     19.904049
-PLTR  21.720947
-PROG  4.240526
-TSLA  1100.292603
-X     26.579590
+11/18/2021, Committed before market open        True Close prices                       Was the prediction in the right direction?
+NVDA  285.796539                                316.75 (earnings released overnight)                        No
+GME   209.946167                                210.12                                                      Yes
+AMC   40.629963                                 40.41                                                       Yes
+AMD   153.677597                                155.02                                                      Yes
+BBBY  19.610260                                 22.90                                                       No
+F     19.904049                                 19.56                                                       Yes
+PLTR  21.720947                                 21.50                                                       Yes
+PROG  4.240526                                  4.30                                                        Yes
+TSLA  1100.292603                               1,096.38                                                    Yes
+X     26.579590                                 24.29                                                       No
