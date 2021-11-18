@@ -15,3 +15,7 @@ This file documents the crontab that runs on the data gathering server.  The MyS
 ## getHistoricalPrices.py
 
 This python script downloads historical data from Yahoo Finance using the yfinance python library.  It runs once every day at midnight outputs daily quote information in csv format
+
+# mysql_table.sql
+
+The description of the table that holds the data in the MySQL database
