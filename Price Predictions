@@ -12,13 +12,13 @@ X     26.579590                                 24.29                           
 
 11/19 is monthly option expiry, some strange price movements are likely
 11/19/2021, Committed before market open        
-NVDA  328.235107
-GME   210.882477
-AMC   41.236969
-AMD   159.455826
-BBBY  22.265198
-F     18.193069
-PLTR  20.297556
-PROG  3.491049
-TSLA  1076.527466
-X     26.419359
+NVDA  328.235107                                329.85                                                      Yes
+GME   210.882477                                228.80                                                      Yes
+AMC   41.236969                                 40.87                                                       Yes
+AMD   159.455826                                155.41                                                      No
+BBBY  22.265198                                 23.25                                                       No
+F     18.193069                                 19.39                                                       Yes
+PLTR  20.297556                                 21.41                                                       Yes
+PROG  3.491049                                  4.89                                                        No
+TSLA  1076.527466                               1,137.06                                                    No
+X     26.419359                                 24.52                                                       Yes
