@@ -15,8 +15,6 @@ reddit = praw.Reddit(client_id='',
     user_agent=''
 )
 
-url = "https://www.reddit.com/r/wallstreetbets/comments/ntvrr6/bb_consolidated_dd_why_last_week_was_just_a/"
-
 mydb = mysql.connector.connect(host='localhost', user='mentions', password='StockMentions123!', database="cs301data")
 
 #Load ticker into set
