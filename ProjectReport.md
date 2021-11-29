@@ -21,6 +21,8 @@ With that being said, one of the most recent forms of stock prediction is known 
 Related Work
 </h2>
 
+The following are some other projects that attempt to predict stock prices using machine learning:
+
 https://towardsdatascience.com/is-it-possible-to-predict-stock-prices-with-a-neural-network-d750af3de50b
 
 https://www.datacamp.com/community/tutorials/lstm-python-stock-market
@@ -28,6 +30,8 @@ https://www.datacamp.com/community/tutorials/lstm-python-stock-market
 https://www.hindawi.com/journals/complexity/2020/6622927/
 
 https://scholar.google.com/scholar?q=stock+prediction+machine+learning&hl=en&as_sdt=0&as_vis=1&oi=scholart
+
+The key difference between these projects and ours is the use of social media sentiment scores as an additional input to the machine learning models.  This additional data allows for more meaningful predictions in theory.
 
 <h2 align="center">
 Data
