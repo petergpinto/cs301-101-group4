@@ -2,6 +2,9 @@
 Stock Market Estimation Using Social Media Sentiment, Peter Pinto & Darius Karoon
 </h1>
 
+<h3 align='center'>
+<a href='https://mediaspace.njit.edu/media/Kaltura+Capture+recording+-+November+28th+2021%2C+8A00A44+pm/1_lk6g88qa'>Video Presentation</a>
+</h3>
 
 <h2 align="center">
   Abstract
