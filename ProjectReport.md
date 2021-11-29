@@ -68,6 +68,10 @@ Experiments
 
 For each of the ten tickers, the stock neural network code is manually run ten times. This is a three to five minute process per ticker, so in order to properly test this, we had to leave plenty of time for testing before the market opened at 9:30am EST. Once the number was obtained, the number goes into the results table awaiting the comparison of the closing price at 4:00pm EST. Once the neural network was tested, the Facebook Prophet code was run once per ticker at an average time of three to five minutes per ticker. This process would provide the confidence interval for future values of each ticker.
 
+The code for the Neural Network experiments can be found [here](https://github.com/petergpinto/cs301-101-group4/blob/master/notebooks/Stock_neural_network.ipynb)
+
+The code for the Facebook Prophet experiments can be found [here](https://github.com/petergpinto/cs301-101-group4/blob/master/notebooks/Stocks_Facebook_Prophet.ipynb)
+
 The following data is for the ticker "GME"
 
 <p align="center">
