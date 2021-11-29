@@ -1,20 +1,37 @@
-Project report
-
+<h1 align="center">
 Stock Market Estimation Using Social Media Sentiment, Peter Pinto & Darius Karoon
+</h1>
 
-Abstract: Briefly describe your problem, approach, and key results. Should be no more than 300 words.
 
+<h2 align="center">
+  Abstract
+</h2>
+  
 We were tasked with creating a price predictor that establishes a connection between social media posts and furture stock prices. The implementation of the predictor involved the use of the Deep Neural Networks and Facebook Prophet models. The tickers used to test this model were AMC, AMD, BBBY, F, GME, NVDA, PLTR, PROG, TSLA, X. The measure of accuracy is whether or not the model correctly predicts the rise or fall of the price of a certain stock. Most of the results from the days, 11/18/21 through 11/22/21, not only had numbers that were in close proximity to the closing price, but also had numbers that indicated the correct direction predicted by the model.
 
-Introduction (10%): Describe the problem you are working on, why it’s important, and an overview of your results
+<h2 align="center">
+Introduction
+</h2>
 
 As more people invest themselves in the stock market due to the continuous rise of the internet, there is also an increasing demand for accurate forsight into future stock prices. Currently, there is competition between dozens of companies who try to advertise their success of their stock prediction software. However, the ability to get good predictions on prices is extremely difficult because the future is unpredictable, which makes the public distrustful of majority of their software. Since stock prices are heavily affected by human emotion, it also plays a huge role in the judgement of future stock prices. Therefore the most efficient way to analyze emotion in association with the stock market is to analyze posts on social media. For instance, Reddit is an immensely popular platform where people from all over the world discuss about any topic; and there is a major community on the platform that focuses on stocks and trading. 
 
 With that being said, one of the most recent forms of stock prediction is known as machine learning. In this project, two of the many methods of machine learning used to analyze comments of subreddits are Deep Neural Networks and Facebook Prophet. The sentiment analysis DNN allows the predictor's performance The most popular stock predictors are those with As mentioned previously, the main indicator of accuracy is the model's ability to predict whether or not a specific stock's price rises or falls. Furthermore Based on the tests, it seems as though the higher the stock price, the more difficult to predict correctly. For instance, the highest stock, TSLA, with an average price of $1,130.10 over the course of three days, had more inaccurate results than smaller stocks like PROG with an average price of $4.55. 
 
-Related Work (10%): Discuss published work that relates to your project. How is your approach similar or different from others?
+<h2 align="center">
+Related Work
+</h2>
 
-Data (10%): Describe the data you are working with for your project. What type of data is it? Where did it come from? How much data are you working with? Did you have to do any preprocessing, filtering, or other special treatment to use this data in your project?
+https://towardsdatascience.com/is-it-possible-to-predict-stock-prices-with-a-neural-network-d750af3de50b
+
+https://www.datacamp.com/community/tutorials/lstm-python-stock-market
+
+https://www.hindawi.com/journals/complexity/2020/6622927/
+
+https://scholar.google.com/scholar?q=stock+prediction+machine+learning&hl=en&as_sdt=0&as_vis=1&oi=scholart
+
+<h2 align="center">
+Data
+</h2>
 
 The data in this project was collected using a program to scrape comments posted on Reddit.  The code collecting the data is running 24/7 on a cloud service, so the amount of data (and quality of predicitons) is always increasing.  At the time of writing, we have collected about 20 days worth of sentiment data.  
 
@@ -31,7 +48,9 @@ This graph is for the ticker "GME" similar graphs for 9 other tickers can be fou
 
 Additionally, we also collect daily price data for each ticker used at a nightly interval.  That data is sourced from Yahoo Finance using the yfinance python library.  The code for this is shown [here](https://github.com/petergpinto/cs301-101-group4/blob/master/data_gathering/getHistoricalPrices.py)
 
-Methods (30%): Discuss your approach for solving the problems that you set up in the introduction. Why is your approach the right thing to do? Did you consider alternative approaches? You should demonstrate that you have applied ideas and skills built up during the quarter to tackling your problem of choice. It may be helpful to include figures, diagrams, or tables to describe your method or compare it with other methods.
+<h2 align="center">
+Methods
+</h2>
 
 Two different models were produced to attempt to predict future prices.  The first model uses Facebook Prophet, which takes time-series data and attempts to extract trends and roll them forward to predict future values.  The second model is a neural network.  
 
@@ -39,11 +58,31 @@ The approach with Facebook Prophet involved two parts.  First, we build a model 
 
 Initially when implementing the neural network, we attempted to use a very large deep network. However, there was a major problem with this approach. The amount of data we have is not yet large enough to train a model with a large number of parameters.  The model simply memorized the data points using its large number of parameters and lost any potential predictive power. Therefore we significantly reduced the size of the model such that memorizing the data would not be possible.  We also made heavy use of regularization to help prevent the weights from becoming too large.  To tune the size of the network, we saved a single validation data point and slowly decreased the size of the network until the model was able to predict the unseen data point with a relatively small margin of error.  The final architecture of the neural network has two densely connected hidden layers, the first with 16 neurons and the second with 8 neurons.
 
-Experiments (30%): Discuss the experiments that you performed to demonstrate that your approach solves the problem. The exact experiments will vary depending on the project, but you might compare with previously published methods, perform an ablation study to determine the impact of various components of your system, experiment with different hyperparameters or architectural choices, use visualization techniques to gain insight into how your model works, discuss common failure modes of your model, etc. You should include graphs, tables, or other figures to illustrate your experimental results.
+<h2 align="center">
+Experiments
+</h2>
 
 For each of the ten tickers, the stock neural network code is manually run ten times. This is a three to five minute process per ticker, so in order to properly test this, we had to leave plenty of time for testing before the market opened at 9:30am EST. Once the number was obtained, the number goes into the results table awaiting the comparison of the closing price at 4:00pm EST. Once the neural network was tested, the Facebook Prophet code was run once per ticker at an average time of three to five minutes per ticker. This process would provide the confidence interval for future values of each ticker.
 
-Conclusion (5%) Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
+The following data is for the ticker "GME"
+
+<p align="center">
+  <img src="https://github.com/petergpinto/cs301-101-group4/blob/master/graphs/GME/forecast.png?raw=true" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/petergpinto/cs301-101-group4/blob/master/graphs/GME/components.png?raw=true" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/petergpinto/cs301-101-group4/blob/master/graphs/GME/sentiment_forecast.png?raw=true" />
+</p>
+
+
+
+<h2 align="center">
+Conclusion
+</h2>
 
 Overall, the analysis of the stock market subreddits is an effective method of predicting future stock prices. Throughout a three day period, the ratio of predictions that went in the right direction to predictions that went in the wrong direction is 3 to 2. If stocks in the stock market are mainly driven by human emotion, then gathering data should be heavily based on human emotion as well. 
 
