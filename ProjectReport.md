@@ -18,7 +18,7 @@ Introduction
 
 As more people invest themselves in the stock market due to the continuous rise of the internet, there is also an increasing demand for accurate forsight into future stock prices. Currently, there is competition between dozens of companies who try to advertise their success of their stock prediction software. However, the ability to get good predictions on prices is extremely difficult because the future is unpredictable, which makes the public distrustful of majority of their software. Since stock prices are heavily affected by human emotion, it also plays a huge role in the judgement of future stock prices. Therefore the most efficient way to analyze emotion in association with the stock market is to analyze posts on social media. For instance, Reddit is an immensely popular platform where people from all over the world discuss about any topic; and there is a major community on the platform that focuses on stocks and trading. 
 
-With that being said, one of the most recent forms of stock prediction is known as machine learning. In this project, two of the many methods of machine learning used to analyze comments of subreddits are Deep Neural Networks and Facebook Prophet. The sentiment analysis DNN allows the predictor's performance The most popular stock predictors are those with As mentioned previously, the main indicator of accuracy is the model's ability to predict whether or not a specific stock's price rises or falls. Furthermore Based on the tests, it seems as though the higher the stock price, the more difficult to predict correctly. For instance, the highest stock, TSLA, with an average price of $1,130.10 over the course of three days, had more inaccurate results than smaller stocks like PROG with an average price of $4.55. 
+With that being said, one of the most recent forms of stock prediction is known as machine learning. In this project, two of the many methods of machine learning used to analyze comments of subreddits are Neural Networks and Facebook Prophet. The sentiment analysis Neural Network allows the predictor to learn complex non-linear relations between sentiment data and price targets.  The most popular stock predictors are those with As mentioned previously, the main indicator of accuracy is the model's ability to predict whether or not a specific stock's price rises or falls. Furthermore Based on the tests, it seems as though the higher the stock price, the more difficult to predict correctly. For instance, the highest stock, TSLA, with an average price of $1,130.10 over the course of three days, had more inaccurate results than smaller stocks like PROG with an average price of $4.55. 
 
 <h2 align="center">
 Related Work
@@ -112,6 +112,8 @@ Conclusion
 </h2>
 
 Overall, the analysis of the stock market subreddits is an effective method of predicting future stock prices. Throughout a three day period, the ratio of predictions that went in the right direction to predictions that went in the wrong direction is 3 to 2. If stocks in the stock market are mainly driven by human emotion, then gathering data should be heavily based on human emotion as well. 
+
+Future work on this project could involve writing more code to ingest data from more numerous sources, such as Facebook, Instagram, Twitter, StockTwits and other social media sites.  As the amount of data collected increases, more complex models can be used as well.  With more datapoints, true DNNs may be used.  Recurrent Neural Networks are also an area where improvement can be made
 
 
 
